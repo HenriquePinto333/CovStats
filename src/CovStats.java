@@ -15,7 +15,7 @@ public class CovStats {
         int[] M = new int[10000];
         //call method readmatrix and declare the number of lines
         int linenumber = readmatrix(date, NI, I, H, UCI, M);
-        comparaçoes(date, NI, I, H, UCI, M, linenumber);
+        comparacoes(date, NI, I, H, UCI, M, linenumber);
 
     }
     public static int readmatrix(String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M) throws FileNotFoundException {
@@ -41,14 +41,14 @@ public class CovStats {
         for( int x = 0 ; x <= linenumber ; x++ ){
             System.out.printf("%s %d %d %d %d %d\n", date[x],NI[x],I[x],H[x],UCI[x],M[x]);
         }
-        System.out.printf("\n\n");
+
         //return the number of lines to the main method, it might be useful
         return linenumber;
     }
-    public static void comparaçoes (String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M, int linenumber) {
+    public static void comparacoes (String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M, int linenumber) {
         Scanner ler = new Scanner(System.in);
-        String data1,data2,dataaux1,dataaux2;
-        int tipo,linha1=0,linha2=0,linha1aux=0,linha2aux=0,dI,dH,dUCI,dM;
+        String data1,data2;
+        int tipo,linha1=0,linha2=0,linha1aux,linha2aux,dI,dH,dUCI,dM;
         System.out.println("Escolha o tipo de intervalos quer comparar");
         System.out.println("1-Dias/2-Semanas/3-Meses/4-Trimestres/5-Anos");
         tipo=ler.nextInt();
