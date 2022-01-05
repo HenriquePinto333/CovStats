@@ -50,6 +50,7 @@ public class CovStats {
         System.out.println("Escolha o tipo de intervalos quer comparar");
         System.out.println("1-Dias/2-Semanas/3-Meses/4-Trimestres/5-Anos");
         tipo=ler.nextInt();
+        ler.nextLine();
         System.out.println("Escolha a primeira data");
         data1= ler.nextLine(); //ler data1
         System.out.println("Escolha a segunda data");
@@ -64,8 +65,8 @@ public class CovStats {
         }
         int y=0;
         while(y <= linenumber && data2!=date[y]){
-            if(data2!=date[x]){
-                linha1++;
+            if(data2!=date[y]){
+                linha2++;
             }
             y++;
         }
@@ -74,16 +75,16 @@ public class CovStats {
             case 1 :
                 dI=I[linha1]-I[linha2];
                 if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else System.out.println("Houve um aumento de "+dI+" infeções");
+                else { System.out.println("Houve um aumento de "+dI+" infeções"); }
                 dH=H[linha1]-H[linha2];
                 if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else System.out.println("Houve um aumento de"+dH+"hospitalizações");
+                else { System.out.println("Houve um aumento de "+dH+" hospitalizações"); }
                 dUCI=UCI[linha1]-UCI[linha2];
                 if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos");
+                else { System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos"); }
                 dM=M[linha1]-M[linha2];
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else System.out.println("Houve um aumento de "+dM+" mortos");
+                else { System.out.println("Houve um aumento de "+dM+" mortos"); }
                 ; break; //dias
             case 2 :
                 linha1aux=linha1+7;
