@@ -76,82 +76,82 @@ public class CovStats {
         switch (tipo){
             case 1 :
                 dI=I[linha2]-I[linha1];
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else { System.out.println("Houve um aumento de "+dI+" infeções"); }
+                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
+                else { System.out.println("Houve um aumento de "+dI+" novas infeções"); }
                 dH=H[linha2]-H[linha1];
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else { System.out.println("Houve um aumento de "+dH+" hospitalizações"); }
+                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
+                else { System.out.println("Houve um aumento de "+dH+" novas hospitalizações"); }
                 dUCI=UCI[linha2]-UCI[linha1];
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else { System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos"); }
+                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
+                else { System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos"); }
                 dM=M[linha2]-M[linha1];
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else { System.out.println("Houve um aumento de "+dM+" mortos"); }
+                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
+                else { System.out.println("Houve um aumento de "+dM+" novas mortes"); }
                 break; //dias
 
             case 2 :
                 linha1aux=linha1+7;
                 linha2aux=linha2+7;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else System.out.println("Houve um aumento de "+dI+" infeções");
+                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
+                else System.out.println("Houve um aumento de "+dI+" novas infeções");
                 dH=(H[linha2aux]-H[linha2])-(H[linha1aux]-H[linha1]);
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else System.out.println("Houve um aumento de "+dH+" hospitalizações");
+                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
+                else System.out.println("Houve um aumento de "+dH+" novas hospitalizações");
                 dUCI=(UCI[linha2aux]-UCI[linha2])-(UCI[linha1aux]-UCI[linha1]);
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos");
+                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
+                else System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos");
                 dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else System.out.println("Houve um aumento de "+dM+" mortos");
+                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
+                else System.out.println("Houve um aumento de "+dM+" novas mortes");
                 break; //semanas
             case 3 :
                 linha1aux=linha1+30;
                 linha2aux=linha2+30;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else System.out.println("Houve um aumento de "+dI+" infeções");
+                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
+                else System.out.println("Houve um aumento de "+dI+" novas infeções");
                 dH=(H[linha2aux]-H[linha2])-(H[linha1aux]-H[linha1]);
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else System.out.println("Houve um aumento de "+dH+" hospitalizações");
+                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
+                else System.out.println("Houve um aumento de "+dH+" novas hospitalizações");
                 dUCI=(UCI[linha2aux]-UCI[linha2])-(UCI[linha1aux]-UCI[linha1]);
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos");
+                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
+                else System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos");
                 dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else System.out.println("Houve um aumento de "+dM+" mortos");
+                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
+                else System.out.println("Houve um aumento de "+dM+" novas mortes");
                 break; //meses
             case 4 :
                 linha1aux=linha1+90;
                 linha2aux=linha2+90;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else System.out.println("Houve um aumento de "+dI+" infeções");
+                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
+                else System.out.println("Houve um aumento de "+dI+" novas infeções");
                 dH=(H[linha2aux]-H[linha2])-(H[linha1aux]-H[linha1]);
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else System.out.println("Houve um aumento de "+dH+" hospitalizações");
+                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
+                else System.out.println("Houve um aumento de "+dH+" novas hospitalizações");
                 dUCI=(UCI[linha2aux]-UCI[linha2])-(UCI[linha1aux]-UCI[linha1]);
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos");
+                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
+                else System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos");
                 dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else System.out.println("Houve um aumento de "+dM+" mortos");
+                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
+                else System.out.println("Houve um aumento de "+dM+" novas mortes");
                 break; //trimestres
             case 5 :
                 linha1aux=linha1+365;
                 linha2aux=linha2+365;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" infeções");}
-                else System.out.println("Houve um aumento de "+dI+" infeções");
+                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
+                else System.out.println("Houve um aumento de "+dI+" novas infeções");
                 dH=(H[linha2aux]-H[linha2])-(H[linha1aux]-H[linha1]);
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" hospitalizações");}
-                else System.out.println("Houve um aumento de "+dH+" hospitalizações");
+                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
+                else System.out.println("Houve um aumento de "+dH+" novas hospitalizações");
                 dUCI=(UCI[linha2aux]-UCI[linha2])-(UCI[linha1aux]-UCI[linha1]);
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" entradas nos cuidados intensivos");
+                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
+                else System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos");
                 dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" mortos");}
-                else System.out.println("Houve um aumento de "+dM+" mortos");
+                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
+                else System.out.println("Houve um aumento de "+dM+" novas mortes");
                 break; //anos
         }
 
