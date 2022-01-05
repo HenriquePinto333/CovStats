@@ -118,15 +118,15 @@ public class CovStats {
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
                 else System.out.println("Houve um aumento de "+dM+" novas mortes");
 
-                int i = linha2 - linha1;
-                int mediaI = dI / i;
-                System.out.println("A média de infeções neste período foi de " + mediaI + " infeções por dia.");
-                int mediaH = dH / i;
-                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH + " por dia.");
-                int mediaUCI = dUCI / i;
-                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI + " por dia.");
-                int mediaM = dM / i;
-                System.out.println("A média de mortes neste período foi de " + mediaM + " por dia.");
+                int j = linha2 - linha1;
+                int mediaI2 = dI / j;
+                System.out.println("A média de infeções neste período foi de " + mediaI2 + " infeções por dia.");
+                int mediaH2 = dH / j;
+                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH2+ " por dia.");
+                int mediaUCI2 = dUCI / j;
+                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI2 + " por dia.");
+                int mediaM2 = dM / j;
+                System.out.println("A média de mortes neste período foi de " + mediaM2 + " por dia.");
 
                 break; //semanas
             case 3 :
@@ -145,15 +145,15 @@ public class CovStats {
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
                 else System.out.println("Houve um aumento de "+dM+" novas mortes");
 
-                int i = linha2 - linha1;
-                int mediaI = dI / i;
-                System.out.println("A média de infeções neste período foi de " + mediaI + " infeções por dia.");
-                int mediaH = dH / i;
-                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH + " por dia.");
-                int mediaUCI = dUCI / i;
-                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI + " por dia.");
-                int mediaM = dM / i;
-                System.out.println("A média de mortes neste período foi de " + mediaM + " por dia.");
+                int k = linha2 - linha1;
+                int mediaI3 = dI / k;
+                System.out.println("A média de infeções neste período foi de " + mediaI3 + " infeções por dia.");
+                int mediaH3 = dH / k;
+                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH3 + " por dia.");
+                int mediaUCI3 = dUCI / k;
+                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI3 + " por dia.");
+                int mediaM3 = dM / k;
+                System.out.println("A média de mortes neste período foi de " + mediaM3 + " por dia.");
 
                 break; //meses
             case 4 :
@@ -172,15 +172,15 @@ public class CovStats {
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
                 else System.out.println("Houve um aumento de "+dM+" novas mortes");
 
-                int i = linha2 - linha1;
-                int mediaI = dI / i;
-                System.out.println("A média de infeções neste período foi de " + mediaI + " infeções por dia.");
-                int mediaH = dH / i;
-                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH + " por dia.");
-                int mediaUCI = dUCI / i;
-                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI + " por dia.");
-                int mediaM = dM / i;
-                System.out.println("A média de mortes neste período foi de " + mediaM + " por dia.");
+                int l = linha2 - linha1;
+                int mediaI4 = dI / l;
+                System.out.println("A média de infeções neste período foi de " + mediaI4 + " infeções por dia.");
+                int mediaH4 = dH / l;
+                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH4 + " por dia.");
+                int mediaUCI4 = dUCI / l;
+                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI4 + " por dia.");
+                int mediaM4 = dM / l;
+                System.out.println("A média de mortes neste período foi de " + mediaM4+ " por dia.");
 
                 break; //trimestres
             case 5 :
@@ -199,15 +199,15 @@ public class CovStats {
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
                 else System.out.println("Houve um aumento de "+dM+" novas mortes");
 
-                int i = linha2 - linha1;
-                int mediaI = dI / i;
-                System.out.println("A média de infeções neste período foi de " + mediaI + " infeções por dia.");
-                int mediaH = dH / i;
-                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH + " por dia.");
-                int mediaUCI = dUCI / i;
-                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI + " por dia.");
-                int mediaM = dM / i;
-                System.out.println("A média de mortes neste período foi de " + mediaM + " por dia.");
+                int h = linha2 - linha1;
+                int mediaI5 = dI / h;
+                System.out.println("A média de infeções neste período foi de " + mediaI5 + " infeções por dia.");
+                int mediaH5 = dH / h;
+                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH5 + " por dia.");
+                int mediaUCI5 = dUCI / h;
+                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI5 + " por dia.");
+                int mediaM5 = dM / h;
+                System.out.println("A média de mortes neste período foi de " + mediaM5+ " por dia.");
 
                 break; //anos
         }
