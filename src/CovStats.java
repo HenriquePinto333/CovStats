@@ -47,34 +47,34 @@ public class CovStats {
     }
     public static void comparacoes (String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M, int linenumber) {
         Scanner ler = new Scanner(System.in);
-        String data1,data2;
-        int tipo,linha1=0,linha2=0,linha1aux,linha2aux,dI,dH,dUCI,dM;
+        String di,df;
+        int r,linha1=0,linha2=0,linha1aux,linha2aux,dI,dH,dUCI,dM;
         System.out.println("Escolha o tipo de intervalos quer comparar");
-        System.out.println("1-Dias/2-Semanas/3-Meses/4-Trimestres/5-Anos");
-        tipo=ler.nextInt();
+        System.out.println("0-Dias/1-Semanas/2-Meses/3-Trimestres");
+        r=ler.nextInt();
         ler.nextLine();
         System.out.println("Escolha a primeira data(copiar a data da matriz imprimida):");
-        data1= ler.nextLine(); //ler data1
+        di= ler.nextLine(); //ler data1
         System.out.println("Escolha a segunda data(copiar a data da matriz imprimida):");
-        data2=ler.nextLine(); //ler data2
+        df=ler.nextLine(); //ler data2
 
         int x=0;
-        while(x < linenumber && !Objects.equals(data1, date[x])){
-            if(!Objects.equals(data1, date[x])){
+        while(x < linenumber && !Objects.equals(di, date[x])){
+            if(!Objects.equals(di, date[x])){
                 linha1++;
             }
             x++;
         }
         int y=0;
-        while(y < linenumber && !Objects.equals(data2, date[y])){
-            if(!Objects.equals(data2, date[y])){
+        while(y < linenumber && !Objects.equals(df, date[y])){
+            if(!Objects.equals(df, date[y])){
                 linha2++;
             }
             y++;
         }
 
-        switch (tipo){
-            case 1 :
+        switch (r){
+            case 0 :
                 dI=I[linha2]-I[linha1];
                 if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
                 else { System.out.println("Houve um aumento de "+dI+" novas infeções"); }
@@ -123,7 +123,7 @@ public class CovStats {
 
 
 
-            case 2 :
+            case 1 :
                 linha1aux=linha1+7;
                 linha2aux=linha2+7;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
@@ -171,7 +171,7 @@ public class CovStats {
                 System.out.printf("%.2f", desviopad42);
 
                 break; //semanas
-            case 3 :
+            case 2 :
                 linha1aux=linha1+30;
                 linha2aux=linha2+30;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
@@ -219,7 +219,7 @@ public class CovStats {
                 System.out.printf("%.2f", desviopad43);
 
                 break; //meses
-            case 4 :
+            case 3 :
                 linha1aux=linha1+90;
                 linha2aux=linha2+90;
                 dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
@@ -267,54 +267,6 @@ public class CovStats {
                 System.out.printf("%.2f", desviopad444);
 
                 break; //trimestres
-            case 5 :
-                linha1aux=linha1+365;
-                linha2aux=linha2+365;
-                dI=(I[linha2aux]-I[linha2])-(I[linha1aux]-I[linha1]);
-                if (dI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dI)+" novas infeções");}
-                else System.out.println("Houve um aumento de "+dI+" novas infeções");
-                dH=(H[linha2aux]-H[linha2])-(H[linha1aux]-H[linha1]);
-                if (dH<0){ System.out.println("Houve uma diminuição de "+Math.abs(dH)+" novas hospitalizações");}
-                else System.out.println("Houve um aumento de "+dH+" novas hospitalizações");
-                dUCI=(UCI[linha2aux]-UCI[linha2])-(UCI[linha1aux]-UCI[linha1]);
-                if (dUCI<0){ System.out.println("Houve uma diminuição de "+Math.abs(dUCI)+" novas entradas nos cuidados intensivos");}
-                else System.out.println("Houve um aumento de "+dUCI+" novas entradas nos cuidados intensivos");
-                dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
-                if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
-                else System.out.println("Houve um aumento de "+dM+" novas mortes");
-//-----------------------------------------------------------------------------------------------------------------------------------------
-                int h = linha2 - linha1;
-                int mediaI5 = dI / h;
-                System.out.println("A média de infeções neste período foi de " + mediaI5 + " infeções por dia.");
-                int mediaH5 = dH / h;
-                System.out.println("A média de novas hospitalizações neste período foi de " + mediaH5 + " por dia.");
-                int mediaUCI5 = dUCI / h;
-                System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI5 + " por dia.");
-                int mediaM5 = dM / h;
-                System.out.println("A média de mortes neste período foi de " + mediaM5+ " por dia.");
-//------------------------------------------------------------------------------------------------------------
-                // desvio padrão
-                double newpe5= h-1;
-                System.out.println("");
-                System.out.println ( "O desvio padrão é o seguinte: ");
-                double  midvalue5=  ((linha2- mediaI5)*(linha2 - mediaI5))/newpe5;
-                  double  desviopad5 = Math.pow ( midvalue5, 0.5);
-                  System.out.println("Novos Infetados: ");
-                  System.out.printf("%.2f", desviopad5);
-                double  midvalue25=  ((linha2- mediaH5)*(linha2 - mediaH5))/newpe5;
-                  double  desviopad25 = Math.pow ( midvalue25, 0.5);
-                System.out.println("Novos Hospitalizados: ");
-                System.out.printf("%.2f", desviopad25);
-                double  midvalue35=  ((linha2- mediaUCI5)*(linha2 - mediaUCI5))/newpe5;
-                  double  desviopad35 = Math.pow ( midvalue35, 0.5);
-                System.out.println("Novos em cuidados UCI: ");
-                System.out.printf("%.2f", desviopad35);
-                double  midvalue45=  ((linha2- mediaM5)*(linha2 - mediaM5))/newpe5;
-                  double  desviopad45 = Math.pow ( midvalue45, 0.5);
-                System.out.println("Novos Mortos: ");
-                System.out.printf("%.2f", desviopad45);
-
-                break; //anos
         }
 
 
