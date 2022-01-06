@@ -98,6 +98,27 @@ public class CovStats {
                 int mediaM = dM / i;
                 System.out.println("A média de mortes neste período foi de " + mediaM + " por dia.");
 
+                // desvio padrão
+                double newpe= i-1;
+                System.out.println("");
+                System.out.println ( "O desvio padrão é o seguinte: ");
+                double  midvalue=  ((linha2- mediaI)*(linha2 - mediaI))/newpe;
+                double  desviopad = Math.pow ( midvalue, 0.5);
+                System.out.println("Novos Infetados: ");
+                System.out.printf("%.2f", desviopad);
+                double  midvalue2=  ((linha2- mediaH)*(linha2 - mediaH))/newpe;
+                double  desviopad2 = Math.pow ( midvalue2, 0.5);
+                System.out.println("Novos Hospitalizados: ");
+                System.out.printf("%.2f", desviopad2);
+                double  midvalue3=  ((linha2- mediaUCI)*(linha2 - mediaUCI))/newpe;
+                double  desviopad3 = Math.pow ( midvalue3, 0.5);
+                System.out.println("Novos em cuidados UCI: ");
+                System.out.printf("%.2f", desviopad3);
+                double  midvalue4=  ((linha2- mediaM)*(linha2 - mediaM))/newpe;
+                double  desviopad4 = Math.pow ( midvalue4, 0.5);
+                System.out.println("Novos Mortos: ");
+                System.out.printf("%.2f", desviopad4);
+
                 break; //dias
 
 
@@ -128,6 +149,27 @@ public class CovStats {
                 int mediaM2 = dM / j;
                 System.out.println("A média de mortes neste período foi de " + mediaM2 + " por dia.");
 
+                // desvio padrão
+                double newpe2= j-1;
+                System.out.println("");
+                System.out.println ( "O desvio padrão é o seguinte: ");
+                double  midvalue1=  ((linha2- mediaI2)*(linha2 - mediaI2))/newpe2;
+                double  desviopad1 = Math.pow ( midvalue1, 0.5);
+                System.out.println("Novos Infetados: ");
+                System.out.printf("%.2f", desviopad1);
+                double  midvalue22=  ((linha2- mediaH2)*(linha2 - mediaH2))/newpe2;
+                double  desviopad22 = Math.pow ( midvalue22, 0.5);
+                System.out.println("Novos Hospitalizados: ");
+                System.out.printf("%.2f", desviopad22);
+                double  midvalue32=  ((linha2- mediaUCI2)*(linha2 - mediaUCI2))/newpe2;
+                double  desviopad32 = Math.pow ( midvalue32, 0.5);
+                System.out.println("Novos em cuidados UCI: ");
+                System.out.printf("%.2f", desviopad32);
+                double  midvalue42=  ((linha2- mediaM2)*(linha2 - mediaM2))/newpe2;
+                double  desviopad42 = Math.pow ( midvalue42, 0.5);
+                System.out.println("Novos Mortos: ");
+                System.out.printf("%.2f", desviopad42);
+
                 break; //semanas
             case 3 :
                 linha1aux=linha1+30;
@@ -154,6 +196,27 @@ public class CovStats {
                 System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI3 + " por dia.");
                 int mediaM3 = dM / k;
                 System.out.println("A média de mortes neste período foi de " + mediaM3 + " por dia.");
+
+                // desvio padrão
+                double newpe3= k-1;
+                System.out.println("");
+                System.out.println ( "O desvio padrão é o seguinte: ");
+                double  midvalue333=  ((linha2- mediaI3)*(linha2 - mediaI3))/newpe3;
+                double  desviopad333 = Math.pow ( midvalue333, 0.5);
+                System.out.println("Novos Infetados: ");
+                System.out.printf("%.2f", desviopad333);
+                double  midvalue23=  ((linha2- mediaH3)*(linha2 - mediaH3))/newpe3;
+                double  desviopad23 = Math.pow ( midvalue23, 0.5);
+                System.out.println("Novos Hospitalizados: ");
+                System.out.printf("%.2f", desviopad23);
+                double  midvalue33=  ((linha2- mediaUCI3)*(linha2 - mediaUCI3))/newpe3;
+                double  desviopad33 = Math.pow ( midvalue33, 0.5);
+                System.out.println("Novos em cuidados UCI: ");
+                System.out.printf("%.2f", desviopad33);
+                double  midvalue43=  ((linha2- mediaM3)*(linha2 - mediaM3))/newpe3;
+                double  desviopad43 = Math.pow ( midvalue43, 0.5);
+                System.out.println("Novos Mortos: ");
+                System.out.printf("%.2f", desviopad43);
 
                 break; //meses
             case 4 :
@@ -182,6 +245,27 @@ public class CovStats {
                 int mediaM4 = dM / l;
                 System.out.println("A média de mortes neste período foi de " + mediaM4+ " por dia.");
 
+                // desvio padrão
+                double newpe4= l-1;
+                System.out.println("");
+                System.out.println ( "O desvio padrão é o seguinte: ");
+                double  midvalue44=  ((linha2- mediaI4)*(linha2 - mediaI4))/newpe4;
+                double  desviopad44 = Math.pow ( midvalue44, 0.5);
+                System.out.println("Novos Infetados: ");
+                System.out.printf("%.2f", desviopad44);
+                double  midvalue24=  ((linha2- mediaH4)*(linha2 - mediaH4))/newpe4;
+                double  desviopad24 = Math.pow ( midvalue24, 0.5);
+                System.out.println("Novos Hospitalizados: ");
+                System.out.printf("%.2f", desviopad24);
+                double  midvalue34=  ((linha2- mediaUCI4)*(linha2 - mediaUCI4))/newpe4;
+                double  desviopad34 = Math.pow ( midvalue34, 0.5);
+                System.out.println("Novos em cuidados UCI: ");
+                System.out.printf("%.2f", desviopad34);
+                double  midvalue444=  ((linha2- mediaM4)*(linha2 - mediaM4))/newpe4;
+                double  desviopad444 = Math.pow ( midvalue444, 0.5);
+                System.out.println("Novos Mortos: ");
+                System.out.printf("%.2f", desviopad444);
+
                 break; //trimestres
             case 5 :
                 linha1aux=linha1+365;
@@ -198,7 +282,7 @@ public class CovStats {
                 dM=(M[linha2aux]-M[linha2])-(M[linha1aux]-M[linha1]);
                 if (dM<0){ System.out.println("Houve uma diminuição de "+Math.abs(dM)+" novas mortes");}
                 else System.out.println("Houve um aumento de "+dM+" novas mortes");
-
+//-----------------------------------------------------------------------------------------------------------------------------------------
                 int h = linha2 - linha1;
                 int mediaI5 = dI / h;
                 System.out.println("A média de infeções neste período foi de " + mediaI5 + " infeções por dia.");
@@ -208,9 +292,32 @@ public class CovStats {
                 System.out.println("A média de novas entradas nos cuidados intensivos neste período foi de " + mediaUCI5 + " por dia.");
                 int mediaM5 = dM / h;
                 System.out.println("A média de mortes neste período foi de " + mediaM5+ " por dia.");
+//------------------------------------------------------------------------------------------------------------
+                // desvio padrão
+                double newpe5= h-1;
+                System.out.println("");
+                System.out.println ( "O desvio padrão é o seguinte: ");
+                double  midvalue5=  ((linha2- mediaI5)*(linha2 - mediaI5))/newpe5;
+                  double  desviopad5 = Math.pow ( midvalue5, 0.5);
+                  System.out.println("Novos Infetados: ");
+                  System.out.printf("%.2f", desviopad5);
+                double  midvalue25=  ((linha2- mediaH5)*(linha2 - mediaH5))/newpe5;
+                  double  desviopad25 = Math.pow ( midvalue25, 0.5);
+                System.out.println("Novos Hospitalizados: ");
+                System.out.printf("%.2f", desviopad25);
+                double  midvalue35=  ((linha2- mediaUCI5)*(linha2 - mediaUCI5))/newpe5;
+                  double  desviopad35 = Math.pow ( midvalue35, 0.5);
+                System.out.println("Novos em cuidados UCI: ");
+                System.out.printf("%.2f", desviopad35);
+                double  midvalue45=  ((linha2- mediaM5)*(linha2 - mediaM5))/newpe5;
+                  double  desviopad45 = Math.pow ( midvalue45, 0.5);
+                System.out.println("Novos Mortos: ");
+                System.out.printf("%.2f", desviopad45);
 
                 break; //anos
         }
+
+
 
     }
 
