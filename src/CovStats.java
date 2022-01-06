@@ -19,7 +19,7 @@ public class CovStats {
 
     }
     public static int readmatrix(String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("info"));
+        Scanner sc = new Scanner(new File("C:\\Users\\Henrique\\Desktop\\exemploRegistoNumerosCovid19 (1).csv"));
         String desc = sc.nextLine();
         String[] fsline = desc.split(",");
         int linenumber = 0;
