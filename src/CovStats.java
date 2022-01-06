@@ -19,7 +19,7 @@ public class CovStats {
 
     }
     public static int readmatrix(String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File("/Users/pedromesquita/Downloads/exemploRegistoNumerosCovid19.csv"));
+        Scanner sc = new Scanner(new File("info"));
         String desc = sc.nextLine();
         String[] fsline = desc.split(",");
         int linenumber = 0;
@@ -322,3 +322,9 @@ public class CovStats {
     }
 
 }
+//double sum = 0; (exemplo)
+/* for ( i=linha1 ; i <= linha 2 ; i++ ){
+  sum = sum+(I[i]-média)*(I[i]-média);
+}
+desviopad = Math.pow((sum/newpe5), 0.5)
+ */
