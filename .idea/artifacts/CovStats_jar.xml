@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CovStats:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CovStats_jar</output-path>
+    <root id="archive" name="CovStats.jar">
+      <element id="module-output" name="CovStats" />
+    </root>
+  </artifact>
+</component>
