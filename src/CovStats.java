@@ -1,10 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class CovStats {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, ParseException {
 
         //Data Diario_nao_infetado Acumulado_infetado Acumulado_hospitalizado Acumulado_internadoUCI Acumulado_mortes
         String[] date = new String[10000];
@@ -15,18 +18,26 @@ public class CovStats {
         int[] M = new int[10000];
         //call method readmatrix and declare the number of lines
         int linenumber = readmatrix(date, NI, I, H, UCI, M);
+       //call method necessary to compare dates
         comparacoes(date, NI, I, H, UCI, M, linenumber);
 
     }
-    public static int readmatrix(String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M) throws FileNotFoundException {
+    public static int readmatrix(String[] date, int[] NI,int[] I, int[] H, int[] UCI, int[] M) throws FileNotFoundException, ParseException {
         Scanner sc = new Scanner(new File("C:\\Users\\Henrique\\Desktop\\exemploRegistoNumerosCovid19 (1).csv"));
         String desc = sc.nextLine();
         String[] fsline = desc.split(",");
+        //convert dates into required format
+        String oldformat = "yyyy-mm-dd";
+        String newformat = "dd-mm-yyyy";
         int linenumber = 0;
         while(sc.hasNextLine()){
             String line = sc.nextLine();
             String[] split = line.split(",");
              date[linenumber] = split[0]; //data
+            SimpleDateFormat sdf = new SimpleDateFormat(oldformat);
+            Date d = sdf.parse(date[linenumber]);
+            sdf.applyPattern(newformat);
+            date[linenumber] = sdf.format(d);
              NI[linenumber] = Integer.parseInt(split[1]); //Não infetados
              I[linenumber] = Integer.parseInt(split[2]); //Infetados
              H[linenumber] = Integer.parseInt(split[3]); //Hospitalizado
